@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: aliceblue;
+    height: 100vh;
+}
+header{
+    padding: 1em; 
+    background: #262626;
+}
+nav .logo{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    width: 15em;
+    text-align: center;
+    padding: 1em;
+    color: white;
+    text-transform: uppercase;
+}
+nav .toggle,
+nav .logo{
+    display: inline-block;
+}
+nav .single-menu{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav .single-menu:hover,
+nav .single-menu:active{
+    background: beige;
+    color: #262626;
+}
+nav .toggle{
+    vertical-align: middle;
+    padding: 1em;
+    color: #fff;
+    float: right;
+}
+@media screen and (min-width: 48em){
+    nav{
+        display: flex;
+    }
+    nav .menu{
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+    }
+    nav .single-menu{
+        width: auto;
+    }
+    nav .toggle{
+        display: none;
+    }
+}
+nav div{
+    display: none;
+}
+@media screen and (min-width: 48em){
+    nav div{
+        display: flex;
+    }
+}
+@media screen and (max-width: 48em){
+    nav.active .toggle{
+        background: deepskyblue;
+    }
+    nav.active div{
+        display: block;
+    }
+    nav .logo{
+        width: 14em;
+    }
+}

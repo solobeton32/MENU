@@ -1,0 +1,100 @@
+
+* {margin: 0;padding: 0;}
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+.mobile-menu {
+    display: block;
+    width: 100%;
+    background: #c99393;
+    line-height: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+.mobile-menu ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    background: #8aa8bd;
+}
+.mobile-menu li {
+	display:inline-block;
+	/* float: left;
+	margin-right: 1px; */
+}
+.mobile-menu li a {
+    display: block;
+    min-width: 140px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    background: #8aa8bd;
+    text-decoration: none;
+    margin-left: -5px;
+    padding: 10px 0;
+    transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+}
+.mobile-menu li:hover a {
+	color: #4db3ff;
+    background-color:#ccddee;
+}
+.mobile-menu li:hover ul a {
+	background: #f3f3f3;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+.mobile-menu li:hover .mobile-menu ul a:hover {color: #4db3ff;}
+.mobile-menu li ul {display: none;}
+.mobile-menu li ul li {display: block;float: none;}
+.mobile-menu li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+/*====================button======================*/
+.mobile-menu .show-menu {
+	text-decoration: none;
+	color: #fff;
+	background: #8aa8bd;
+	text-align: center;
+	padding: 10px 15px;
+	display: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.mobile-menu .show-menu span{padding-left: 25px;}
+.mobile-menu input[type=checkbox]{display: none;}
+.mobile-menu input[type=checkbox]:checked ~ #menu{display: block;}
+/*====================responsive 700px==========================*/
+@media screen and (max-width : 700px){
+  .mobile-menu .lines {
+    border-bottom: 15px double #f8f8f8; 
+    border-top: 5px solid #f8f8f8; 
+    content:"";
+    height: 5px; 
+    width:20px;
+    padding-right:15px;
+    float: right;
+}
+	/*Make dropdown links appear inline*/
+	.mobile-menu ul {position: static; display: none;}
+	/*Create vertical spacing*/
+	.mobile-menu li {margin-bottom: 1px;}
+	/*Make all menu links full width*/
+	.mobile-menu ul li, .mobile-menu li a {width: 100%;}
+	/*Display 'show menu' link*/
+	.mobile-menu .show-menu {display:block;}
+}
+
